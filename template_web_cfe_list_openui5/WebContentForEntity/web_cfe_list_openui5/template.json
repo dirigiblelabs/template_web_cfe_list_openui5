@@ -1,0 +1,37 @@
+{  
+    "name":"List Entities (Open UI5)",
+    "description":"List of entities page based on Open UI5",
+    "image":"list-openui5.png",
+    "sources": [{
+        "name":"index.html",
+        "action":"generate"
+    }, {
+        "name":"Table.controller.js",
+        "action":"generate"
+    }, {
+        "name":"Table.view.xml",
+        "action":"generate"
+    }, {
+        "name":"Component.js",
+        "action":"generate"
+    }],
+    "parameters": [{
+        "name":"templateType",
+        "required":"true"
+    }, {
+        "name":"fileName",
+        "required":"true"
+    }, {
+        "name":"projectName",
+        "required":"true"
+    }, {
+        "name":"packageName",
+        "required":"true"
+    }, {  
+        "name":"tableName",
+        "required":"true"
+    }, {  
+        "name":"columns",
+        "required":"true"
+    }]
+}

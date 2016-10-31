@@ -1,0 +1,37 @@
+<mvc:View
+	controllerName="io.dirigible.templates.list.${tableName}.Table"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Table id="idProductsTable"
+		inset="false"
+		items="{
+		    path: '/'
+		}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="${pageTitle}" level="H2"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+#foreach ($tableColumn in $tableColumns)
+#if($tableColumn.isVisible())
+            <Column>
+				<Text text="${tableColumn.getLabel()}"/>
+			</Column>
+#end
+#end
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+#foreach ($tableColumn in $tableColumns)
+#if($tableColumn.isVisible())
+				    <Text text="{${tableColumn.getName()}}"/>
+#end
+#end
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</mvc:View>
