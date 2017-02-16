@@ -15,9 +15,9 @@
 		</headerToolbar>
 		<columns>
 #foreach ($tableColumn in $tableColumns)
-#if($tableColumn.isVisible())
+#if($tableColumn.visible)
             <Column>
-				<Text text="${tableColumn.getLabel()}"/>
+				<Text text="${tableColumn.label}"/>
 			</Column>
 #end
 #end
@@ -26,8 +26,8 @@
 			<ColumnListItem>
 				<cells>
 #foreach ($tableColumn in $tableColumns)
-#if($tableColumn.isVisible())
-				    <Text text="{${tableColumn.getName()}}"/>
+#if($tableColumn.visible)
+				    <Text text="{${tableColumn.name}}"/>
 #end
 #end
 				</cells>

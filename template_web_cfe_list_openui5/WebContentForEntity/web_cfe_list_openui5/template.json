@@ -4,15 +4,20 @@
     "image":"list-openui5.png",
     "sources": [{
         "name":"index.html",
-        "action":"generate"
+        "rootFolder":"WebContent",
+        "action":"generate",
+        "rename":"%s"
     }, {
         "name":"Table.controller.js",
+        "rootFolder":"WebContent",
         "action":"generate"
     }, {
         "name":"Table.view.xml",
+        "rootFolder":"WebContent",
         "action":"generate"
     }, {
         "name":"Component.js",
+        "rootFolder":"WebContent",
         "action":"generate"
     }],
     "parameters": [{
